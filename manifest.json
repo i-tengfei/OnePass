@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+
+    "name": "OnePass",
+    "version": "0.1.0",
+    "description": "只需一键即可登录所有网站，你的最后一个密码。",
+    "permissions" : [
+        "tabs",
+        "storage",
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [
+        "oauth2/oauth2.html"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches" : [
+                "file://*/*",
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css" : [ "content.css" ],
+            "js" : [ "jquery.js", "underscore.js", "content.js" ],
+            "run_at" : "document_start",
+            "all_frames": true
+        },{
+            "matches": ["http://auth.sina.com.cn/robots.txt*"],
+            "js": ["oauth2/oauth2_inject.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "scripts": [ "cryptico.js", "md5.js", "jquery.js", "events.js", "url.js", "underscore.js", "oauth2/oauth2.js", "vdisk.js", "onepass.js" ]
+    },
+    "options_page": "options.html"
+}

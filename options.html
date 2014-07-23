@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>OnePass</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.vertical-tabs.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="col-md-2">
+            <ul class="nav nav-tabs tabs-left" role="tablist">
+                <li><a href="#options" role="tab" data-toggle="tab">选项</a></li>
+                <li><a href="#cloud" role="tab" data-toggle="tab">同步服务</a></li>
+            </ul>
+        </div>
+
+        <div class="tab-content col-md-10">
+            <div class="tab-pane" id="options">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">失效时间</span>
+                            <input id="delay" value="10" type="text" class="form-control"  placeholder="请输入密码失效时间">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <a id="save" type="button" class="btn btn-default btn-sm">保存</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <a id="weibo" type="button" class="btn btn-default btn-sm">微博登录</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="cloud">...</div>
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade" id="initOnePass" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">初始化OnePass</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="disabledTextInput">请输入您的唯一密码</label>
+                        <input type="password" class="form-control input-lg" id="OnePass">
+                    </div>
+                    <div class="form-group">
+                        <label for="disabledTextInput">请选择您的同步服务</label>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary" id="vdisk">
+                                <input type="radio" name="cloud">微盘
+                            </label>
+                            <label class="btn btn-primary" id="baidu">
+                                <input type="radio" name="cloud">百度云
+                            </label>
+                        </div>
+                        <p id="cloudStatus"></p>
+                    </div>
+<!--                     <div class="form-group">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">唯一密码</span>
+                            <input id="onePass" type="password" class="form-control"  placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">选择同步服务</span>
+                            <input id="onePass" type="password" class="form-control"  placeholder="">
+                        </div>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="initSubmit" class="btn btn-primary" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

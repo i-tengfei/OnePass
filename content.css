@@ -1,0 +1,129 @@
+#onepass-addaccount{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    margin-left: -311px;
+    margin-top: -211px;
+    background: #FFF;
+    z-index: 999998;
+    border-radius: 2px;
+    box-shadow: 0 0 15px #FFF;
+    border: 1px solid #CCC;
+    font-family: "Microsoft Yahei";
+}
+#onepass-addaccount h3{
+    text-align: center;
+    margin: 10px 0;
+}
+#onepass-addaccount .onepass-typename{
+    padding: 0 10px;
+    color: #CC0000;
+}
+#onepass-submit{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+
+
+
+
+#onepass-authorize{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 90px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 15px #FFF;
+    border: 1px solid #CCC;
+    background: #FFF;
+    font-family: "Microsoft Yahei";
+    z-index: 999999;
+}
+#onepass-authorize h3{
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+}
+#onepass-onepass{
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    width: 260px;
+    margin: 9px 14px;
+    padding: 0 15px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #CCC;
+    border: 1px solid #CCC;
+    float: left;
+    display: block;
+}
+#onepass-onepass-submit{
+    float: left;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    width: 70px;
+    margin: 9px 4px;
+    background: #C0C0C0;
+    color: #FFF;
+}
+
+
+
+.onepass-addinput{
+    position: absolute;
+    font-family: "Microsoft Yahei";
+    z-index: 999999;
+}
+
+
+#onepass-addtype{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #FFF;
+    box-shadow: 0 0 5px #CCC;
+    padding: 10px 0;
+    font-family: "Microsoft Yahei";
+    z-index: 999999;
+}
+#onepass-addtype h3{
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+}
+
+#onepass-addtype-view{
+    position: absolute;
+    top: 40px;
+    bottom: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#onepass-addtype-content li{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.onepass-addtype-name{
+    width: 60px;
+    text-align: center;
+    float: left;
+}

@@ -1,0 +1,74 @@
+{
+    "apps": [
+        {
+            "name": "京东",
+            "web": {
+                "domains": [ "jd.com" ],
+                "urls": [
+                    {
+                        "url": "https://passport.jd.com/new/login.aspx",
+                        "type": 0
+                    }
+                ]
+            }
+        },{
+            "name": "百度",
+            "web": {
+                "domains": [ "baidu.com" ],
+                "urls": [
+                    {
+                        "url": "http://www.baidu.com",
+                        "type": 1
+                    }
+                ]
+            }
+        }
+    ],
+    "types": {
+        "web": [
+            {
+                "type": 0,
+                "id": 0,
+                "name": "京东登录页面",
+                "form": "#formlogin",
+                "inputs": [
+                    {
+                        "type": "text",
+                        "opType": "username",
+                        "selector": "#loginname",
+                        "must": 1,
+                        "name": "账户"
+                    },{
+                        "type": "password",
+                        "opType": "password",
+                        "selector": "#nloginpwd",
+                        "must": 1,
+                        "name": "密码"
+                    }
+                ],
+                "submit": "#loginsubmit"
+            },{
+                "type": 0,
+                "id": 1,
+                "name": "百度登录",
+                "form": "#TANGRAM__PSP_8__form",
+                "inputs": [
+                    {
+                        "type": "text",
+                        "opType": "username",
+                        "selector": "#TANGRAM__PSP_8__userName",
+                        "must": 1,
+                        "name": "账户"
+                    },{
+                        "type": "password",
+                        "opType": "password",
+                        "selector": "#TANGRAM__PSP_8__password",
+                        "must": 1,
+                        "name": "密码"
+                    }
+                ],
+                "submit": "#TANGRAM__PSP_8__submit"
+            }
+        ]
+    }
+}
